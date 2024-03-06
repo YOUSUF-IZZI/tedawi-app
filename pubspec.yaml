@@ -11,6 +11,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+
+  # Responsive UI
+  flutter_screenutil: 5.9.0
   # State Management
   #flutter_bloc: ^8.1.4
 
