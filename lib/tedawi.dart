@@ -9,10 +9,8 @@ class TedawiApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    //Iphone 15 pro max width: 430.0
-    //Iphone 15 pro max height: 932.0
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
