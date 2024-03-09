@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tedawi/core/helper/extensions.dart';
 import 'package:tedawi/core/routing/router_paths.dart';
 import 'package:tedawi/core/utils/colors.dart';
@@ -10,19 +11,18 @@ class GetStartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: EdgeInsets.symmetric(horizontal: 32.w),
       child: MaterialButton(
         onPressed: () {
           context.pushNamed(RouterPaths.login);
         },
         color: AppColors.main,
         minWidth: double.infinity,
-        height: 52,
+        height: 52.h,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        //padding: const EdgeInsets.symmetric(vertical: 15),
-        child: const Text(
+        child: Text(
           'Get Started',
           style: AppStyles.semiBold16,
         ),
