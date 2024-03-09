@@ -17,7 +17,7 @@ class OnboardingHeader extends StatelessWidget {
           const SizedBox(
             width: 8,
           ),
-          const Text(
+          Text(
             'Tedawi',
             style: AppStyles.bold24,
           )

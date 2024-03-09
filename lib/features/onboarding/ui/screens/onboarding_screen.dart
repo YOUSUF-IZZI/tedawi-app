@@ -9,11 +9,11 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           children: [
-            Expanded(
+            const Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -26,24 +26,19 @@ class OnboardingScreen extends StatelessWidget {
             ),
             //SizedBox(height: 18),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
                 style: AppStyles.regular12,
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 30),
-            GetStartedButton(),
-            SizedBox(height: 44),
+            const SizedBox(height: 30),
+            const GetStartedButton(),
+            const SizedBox(height: 44),
           ],
         ),
       ),
     );
   }
 }
-
-
-// This is onboarding_screen.dart
-// Path: lib/features/onboarding/ui/screens/onboarding_screen.dart
-// Contains from 3 widgets
