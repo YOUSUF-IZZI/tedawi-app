@@ -58,13 +58,13 @@ abstract class AppStyles {
 
   // Semi-bold
   static TextStyle semiBold12 = TextStyle(
-    color: Color(0xFF064060),
+    color: const Color(0xFF064060),
     fontSize: 12.sp,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
   static TextStyle semiBold14 = TextStyle(
-    color: Color(0xFF064060),
+    color: const Color(0xFF064060),
     fontSize: 14.sp,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
@@ -76,7 +76,7 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
   );
   static TextStyle semiBold18 = TextStyle(
-    color: Color(0xFF064060),
+    color: const Color(0xFF064060),
     fontSize: 18.sp,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,

@@ -10,6 +10,8 @@ class AppTextFormField extends StatefulWidget {
     this.suffixIcon,
     this.backgroundColor,
     this.prefixIcon,
+    this.controller,
+    this.validator,
   });
 
   final String hintText;
@@ -17,6 +19,8 @@ class AppTextFormField extends StatefulWidget {
   final Widget? suffixIcon;
   final Color? backgroundColor;
   final Widget? prefixIcon;
+  final TextEditingController? controller;
+  final Function(String)? validator;
 
   @override
   State<AppTextFormField> createState() => _AppTextFormFieldState();
@@ -28,6 +32,8 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: isObscureText,
+      controller: widget.controller,
+      validator: (value) => widget.validator!(value!),
       decoration: InputDecoration(
         //-------------------------------------- Borders --------------------------------------
         enabledBorder: OutlineInputBorder(
@@ -44,8 +50,14 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           ),
           borderRadius: BorderRadius.circular(16),
         ),
-        // the errorBorder is the border that is shown when the TextFormField has an error
         errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
             width: 2,
